@@ -1,0 +1,17 @@
+﻿<Window x:Class="ERP_System.ChoseFuncWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChoseFuncWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SDButton" Content="SD流程" HorizontalAlignment="Left" Margin="195,77,0,0" VerticalAlignment="Top" Width="75" Click="SDButton_Click"/>
+        <Button x:Name="MMButton" Content="MM流程" HorizontalAlignment="Left" Margin="195,143,0,0" VerticalAlignment="Top" Width="75" Click="MMButton_Click"/>
+        <Button x:Name="InformationButton" Content="修改信息" HorizontalAlignment="Left" Margin="51,222,0,0" VerticalAlignment="Top" Width="75" Click="InformationButton_Click"/>
+        <Button x:Name="ManageButton" Content="用户管理" HorizontalAlignment="Left" Margin="195,222,0,0" VerticalAlignment="Top" Width="75" Click="ManageButton_Click"/>
+        <Label x:Name="SDLabel" Content="ERP系统SD流程" HorizontalAlignment="Left" Margin="51,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="MMLabel" Content="ERP系统MM流程" HorizontalAlignment="Left" Margin="51,143,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

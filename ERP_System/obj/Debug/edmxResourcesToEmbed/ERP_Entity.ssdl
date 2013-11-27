@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERP_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ERP_DBModelStoreContainer">
+    <EntitySet Name="contactPerson" EntityType="ERP_DBModel.Store.contactPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customers" EntityType="ERP_DBModel.Store.customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="deliveryOrder" EntityType="ERP_DBModel.Store.deliveryOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inquiry" EntityType="ERP_DBModel.Store.inquiry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inquriy_ma" EntityType="ERP_DBModel.Store.inquriy_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="invo_ma" EntityType="ERP_DBModel.Store.invo_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="invoice" EntityType="ERP_DBModel.Store.invoice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="materials" EntityType="ERP_DBModel.Store.materials" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="orderForm" EntityType="ERP_DBModel.Store.orderForm" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="orderForm_ma" EntityType="ERP_DBModel.Store.orderForm_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="out_ma" EntityType="ERP_DBModel.Store.out_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="quo_ma" EntityType="ERP_DBModel.Store.quo_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="quotation" EntityType="ERP_DBModel.Store.quotation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="re_ven_ma" EntityType="ERP_DBModel.Store.re_ven_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rece_ma" EntityType="ERP_DBModel.Store.rece_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="receipt" EntityType="ERP_DBModel.Store.receipt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="requisition" EntityType="ERP_DBModel.Store.requisition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rfq" EntityType="ERP_DBModel.Store.rfq" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rfq_ven_ma" EntityType="ERP_DBModel.Store.rfq_ven_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sales_ma" EntityType="ERP_DBModel.Store.sales_ma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="salesOrder" EntityType="ERP_DBModel.Store.salesOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user" EntityType="ERP_DBModel.Store.user" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vendor" EntityType="ERP_DBModel.Store.vendor" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__contactPe__compa__1273C1CD" Association="ERP_DBModel.Store.FK__contactPe__compa__1273C1CD">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="contactPerson" EntitySet="contactPerson" />
+    </AssociationSet>
+    <AssociationSet Name="FK__deliveryO__compa__1FCDBCEB" Association="ERP_DBModel.Store.FK__deliveryO__compa__1FCDBCEB">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="deliveryOrder" EntitySet="deliveryOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__deliveryO__sales__20C1E124" Association="ERP_DBModel.Store.FK__deliveryO__sales__20C1E124">
+      <End Role="salesOrder" EntitySet="salesOrder" />
+      <End Role="deliveryOrder" EntitySet="deliveryOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__inquiry__company__15502E78" Association="ERP_DBModel.Store.FK__inquiry__company__15502E78">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="inquiry" EntitySet="inquiry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__inquriy_m__compa__37A5467C" Association="ERP_DBModel.Store.FK__inquriy_m__compa__37A5467C">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="inquriy_ma" EntitySet="inquriy_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__inquriy_m__inqui__35BCFE0A" Association="ERP_DBModel.Store.FK__inquriy_m__inqui__35BCFE0A">
+      <End Role="inquiry" EntitySet="inquiry" />
+      <End Role="inquriy_ma" EntitySet="inquriy_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__inquriy_m__mater__36B12243" Association="ERP_DBModel.Store.FK__inquriy_m__mater__36B12243">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="inquriy_ma" EntitySet="inquriy_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invo_ma__company__4BAC3F29" Association="ERP_DBModel.Store.FK__invo_ma__company__4BAC3F29">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="invo_ma" EntitySet="invo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invo_ma__invoice__4CA06362" Association="ERP_DBModel.Store.FK__invo_ma__invoice__4CA06362">
+      <End Role="invoice" EntitySet="invoice" />
+      <End Role="invo_ma" EntitySet="invo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invo_ma__materia__4D94879B" Association="ERP_DBModel.Store.FK__invo_ma__materia__4D94879B">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="invo_ma" EntitySet="invo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__invoice__company__239E4DCF" Association="ERP_DBModel.Store.FK__invoice__company__239E4DCF">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="invoice" EntitySet="invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__materials__vendo__32E0915F" Association="ERP_DBModel.Store.FK__materials__vendo__32E0915F">
+      <End Role="vendor" EntitySet="vendor" />
+      <End Role="materials" EntitySet="materials" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orderForm__mater__5BE2A6F2" Association="ERP_DBModel.Store.FK__orderForm__mater__5BE2A6F2">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="orderForm_ma" EntitySet="orderForm_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orderForm__order__5AEE82B9" Association="ERP_DBModel.Store.FK__orderForm__order__5AEE82B9">
+      <End Role="orderForm" EntitySet="orderForm" />
+      <End Role="orderForm_ma" EntitySet="orderForm_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orderForm__rfqID__2D27B809" Association="ERP_DBModel.Store.FK__orderForm__rfqID__2D27B809">
+      <End Role="rfq" EntitySet="rfq" />
+      <End Role="orderForm" EntitySet="orderForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orderForm__rfqID__59FA5E80" Association="ERP_DBModel.Store.FK__orderForm__rfqID__59FA5E80">
+      <End Role="rfq" EntitySet="rfq" />
+      <End Role="orderForm_ma" EntitySet="orderForm_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orderForm__vendo__2C3393D0" Association="ERP_DBModel.Store.FK__orderForm__vendo__2C3393D0">
+      <End Role="vendor" EntitySet="vendor" />
+      <End Role="orderForm" EntitySet="orderForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK__out_ma__companyC__46E78A0C" Association="ERP_DBModel.Store.FK__out_ma__companyC__46E78A0C">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="out_ma" EntitySet="out_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__out_ma__delivery__47DBAE45" Association="ERP_DBModel.Store.FK__out_ma__delivery__47DBAE45">
+      <End Role="deliveryOrder" EntitySet="deliveryOrder" />
+      <End Role="out_ma" EntitySet="out_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__out_ma__material__48CFD27E" Association="ERP_DBModel.Store.FK__out_ma__material__48CFD27E">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="out_ma" EntitySet="out_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__out_ma__salesOrd__45F365D3" Association="ERP_DBModel.Store.FK__out_ma__salesOrd__45F365D3">
+      <End Role="salesOrder" EntitySet="salesOrder" />
+      <End Role="out_ma" EntitySet="out_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quo_ma__companyC__3D5E1FD2" Association="ERP_DBModel.Store.FK__quo_ma__companyC__3D5E1FD2">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="quo_ma" EntitySet="quo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quo_ma__inquiryI__3C69FB99" Association="ERP_DBModel.Store.FK__quo_ma__inquiryI__3C69FB99">
+      <End Role="inquiry" EntitySet="inquiry" />
+      <End Role="quo_ma" EntitySet="quo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quo_ma__material__3B75D760" Association="ERP_DBModel.Store.FK__quo_ma__material__3B75D760">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="quo_ma" EntitySet="quo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quo_ma__quotatio__3A81B327" Association="ERP_DBModel.Store.FK__quo_ma__quotatio__3A81B327">
+      <End Role="quotation" EntitySet="quotation" />
+      <End Role="quo_ma" EntitySet="quo_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quotation__compa__182C9B23" Association="ERP_DBModel.Store.FK__quotation__compa__182C9B23">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="quotation" EntitySet="quotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__quotation__inqui__1920BF5C" Association="ERP_DBModel.Store.FK__quotation__inqui__1920BF5C">
+      <End Role="inquiry" EntitySet="inquiry" />
+      <End Role="quotation" EntitySet="quotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__re_ven_ma__mater__5165187F" Association="ERP_DBModel.Store.FK__re_ven_ma__mater__5165187F">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="re_ven_ma" EntitySet="re_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__re_ven_ma__requi__5070F446" Association="ERP_DBModel.Store.FK__re_ven_ma__requi__5070F446">
+      <End Role="requisition" EntitySet="requisition" />
+      <End Role="re_ven_ma" EntitySet="re_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__re_ven_ma__vendo__52593CB8" Association="ERP_DBModel.Store.FK__re_ven_ma__vendo__52593CB8">
+      <End Role="vendor" EntitySet="vendor" />
+      <End Role="re_ven_ma" EntitySet="re_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rece_ma__materia__5FB337D6" Association="ERP_DBModel.Store.FK__rece_ma__materia__5FB337D6">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="rece_ma" EntitySet="rece_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rece_ma__receipt__5EBF139D" Association="ERP_DBModel.Store.FK__rece_ma__receipt__5EBF139D">
+      <End Role="receipt" EntitySet="receipt" />
+      <End Role="rece_ma" EntitySet="rece_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__receipt__vendorC__300424B4" Association="ERP_DBModel.Store.FK__receipt__vendorC__300424B4">
+      <End Role="vendor" EntitySet="vendor" />
+      <End Role="receipt" EntitySet="receipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rfq_ven_m__mater__571DF1D5" Association="ERP_DBModel.Store.FK__rfq_ven_m__mater__571DF1D5">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="rfq_ven_ma" EntitySet="rfq_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rfq_ven_m__rfqID__5535A963" Association="ERP_DBModel.Store.FK__rfq_ven_m__rfqID__5535A963">
+      <End Role="rfq" EntitySet="rfq" />
+      <End Role="rfq_ven_ma" EntitySet="rfq_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__rfq_ven_m__vendo__5629CD9C" Association="ERP_DBModel.Store.FK__rfq_ven_m__vendo__5629CD9C">
+      <End Role="vendor" EntitySet="vendor" />
+      <End Role="rfq_ven_ma" EntitySet="rfq_ven_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sales_ma__compan__403A8C7D" Association="ERP_DBModel.Store.FK__sales_ma__compan__403A8C7D">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="sales_ma" EntitySet="sales_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sales_ma__materi__4316F928" Association="ERP_DBModel.Store.FK__sales_ma__materi__4316F928">
+      <End Role="materials" EntitySet="materials" />
+      <End Role="sales_ma" EntitySet="sales_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sales_ma__quotat__412EB0B6" Association="ERP_DBModel.Store.FK__sales_ma__quotat__412EB0B6">
+      <End Role="quotation" EntitySet="quotation" />
+      <End Role="sales_ma" EntitySet="sales_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__sales_ma__salesO__4222D4EF" Association="ERP_DBModel.Store.FK__sales_ma__salesO__4222D4EF">
+      <End Role="salesOrder" EntitySet="salesOrder" />
+      <End Role="sales_ma" EntitySet="sales_ma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__salesOrde__compa__1BFD2C07" Association="ERP_DBModel.Store.FK__salesOrde__compa__1BFD2C07">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="salesOrder" EntitySet="salesOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__salesOrde__quota__1CF15040" Association="ERP_DBModel.Store.FK__salesOrde__quota__1CF15040">
+      <End Role="quotation" EntitySet="quotation" />
+      <End Role="salesOrder" EntitySet="salesOrder" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="contactPerson">
+    <Key>
+      <PropertyRef Name="contacnPersonID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="contacnPersonID" Type="int" Nullable="false" />
+    <Property Name="department" Type="nvarchar" MaxLength="1" />
+    <Property Name="gender" Type="nvarchar" MaxLength="1" />
+    <Property Name="name" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="companyCode" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="country" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="address" Type="nvarchar" MaxLength="1" />
+    <Property Name="texRate" Type="decimal" Nullable="false" Precision="4" Scale="3" />
+  </EntityType>
+  <EntityType Name="deliveryOrder">
+    <Key>
+      <PropertyRef Name="deliveryOrderID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="salesOrder" Type="int" Nullable="false" />
+    <Property Name="deliveryOrderID" Type="int" Nullable="false" />
+    <Property Name="deliveryLocation" Type="nvarchar" MaxLength="1" />
+    <Property Name="deliveryDate" Type="date" />
+  </EntityType>
+  <EntityType Name="inquiry">
+    <Key>
+      <PropertyRef Name="inquiryID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="inquiryID" Type="int" Nullable="false" />
+    <Property Name="currency" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="amount" Type="decimal" Nullable="false" Precision="14" Scale="4" />
+    <Property Name="creationDate" Type="date" />
+  </EntityType>
+  <EntityType Name="inquriy_ma">
+    <Key>
+      <PropertyRef Name="inquiryID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="inquiryID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+    <Property Name="companyCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="invo_ma">
+    <Key>
+      <PropertyRef Name="invoiceID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="invoiceID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="invoice">
+    <Key>
+      <PropertyRef Name="invoiceID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="invoiceID" Type="int" Nullable="false" />
+    <Property Name="fiscalYear" Type="int" />
+    <Property Name="currency" Type="nvarchar" MaxLength="1" />
+    <Property Name="amount" Type="decimal" Precision="14" Scale="4" />
+    <Property Name="creationDate" Type="date" />
+  </EntityType>
+  <EntityType Name="materials">
+    <Key>
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="materialID" Type="int" Nullable="false" />
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="1" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="placeOfOrigin" Type="nvarchar" MaxLength="1" />
+    <Property Name="describtion" Type="nvarchar" MaxLength="1" />
+    <Property Name="unitPrice" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="discount" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="stock" Type="int" />
+  </EntityType>
+  <EntityType Name="orderForm">
+    <Key>
+      <PropertyRef Name="orderFormID" />
+    </Key>
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+    <Property Name="orderFormID" Type="int" Nullable="false" />
+    <Property Name="rfqID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="orderForm_ma">
+    <Key>
+      <PropertyRef Name="orderFormID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="rfqID" Type="int" Nullable="false" />
+    <Property Name="orderFormID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="out_ma">
+    <Key>
+      <PropertyRef Name="deliveryOrderID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="salesOrderID" Type="int" Nullable="false" />
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="deliveryOrderID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quo_ma">
+    <Key>
+      <PropertyRef Name="quotationID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="quotationID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+    <Property Name="inquiryID" Type="int" Nullable="false" />
+    <Property Name="companyCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quotation">
+    <Key>
+      <PropertyRef Name="quotationID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="inquiryID" Type="int" Nullable="false" />
+    <Property Name="quotationID" Type="int" Nullable="false" />
+    <Property Name="effectiveDate" Type="date" />
+    <Property Name="deadline" Type="date" />
+    <Property Name="amount" Type="decimal" Nullable="false" Precision="14" Scale="4" />
+  </EntityType>
+  <EntityType Name="re_ven_ma">
+    <Key>
+      <PropertyRef Name="requisitionID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="requisitionID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rece_ma">
+    <Key>
+      <PropertyRef Name="receiptID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="receiptID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="receipt">
+    <Key>
+      <PropertyRef Name="receiptID" />
+    </Key>
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+    <Property Name="receiptID" Type="int" Nullable="false" />
+    <Property Name="creationDate" Type="date" />
+    <Property Name="amount" Type="decimal" Precision="14" Scale="4" />
+  </EntityType>
+  <EntityType Name="requisition">
+    <Key>
+      <PropertyRef Name="requisitionID" />
+    </Key>
+    <Property Name="requisitionID" Type="int" Nullable="false" />
+    <Property Name="bidDate" Type="date" />
+  </EntityType>
+  <EntityType Name="rfq">
+    <Key>
+      <PropertyRef Name="rfqID" />
+    </Key>
+    <Property Name="rfqID" Type="int" Nullable="false" />
+    <Property Name="quotationDate" Type="date" />
+    <Property Name="creationDate" Type="date" />
+  </EntityType>
+  <EntityType Name="rfq_ven_ma">
+    <Key>
+      <PropertyRef Name="rfqID" />
+      <PropertyRef Name="vendorCode" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="rfqID" Type="int" Nullable="false" />
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sales_ma">
+    <Key>
+      <PropertyRef Name="salesOrderID" />
+      <PropertyRef Name="materialID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="quotationID" Type="int" Nullable="false" />
+    <Property Name="salesOrderID" Type="int" Nullable="false" />
+    <Property Name="materialID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="salesOrder">
+    <Key>
+      <PropertyRef Name="salesOrderID" />
+    </Key>
+    <Property Name="companyCode" Type="int" Nullable="false" />
+    <Property Name="quotationID" Type="int" Nullable="false" />
+    <Property Name="salesOrderID" Type="int" Nullable="false" />
+    <Property Name="amount" Type="decimal" Nullable="false" Precision="14" Scale="4" />
+    <Property Name="paymentDate" Type="date" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="20" />
+    <Property Name="Type" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="vendor">
+    <Key>
+      <PropertyRef Name="vendorCode" />
+    </Key>
+    <Property Name="vendorCode" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="1" />
+    <Property Name="location" Type="nvarchar" MaxLength="1" />
+    <Property Name="currency" Type="nvarchar" MaxLength="1" />
+    <Property Name="taxRate" Type="decimal" Precision="4" Scale="3" />
+  </EntityType>
+  <Association Name="FK__contactPe__compa__1273C1CD">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="contactPerson" Type="ERP_DBModel.Store.contactPerson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="contactPerson">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__deliveryO__compa__1FCDBCEB">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="deliveryOrder" Type="ERP_DBModel.Store.deliveryOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="deliveryOrder">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__deliveryO__sales__20C1E124">
+    <End Role="salesOrder" Type="ERP_DBModel.Store.salesOrder" Multiplicity="1" />
+    <End Role="deliveryOrder" Type="ERP_DBModel.Store.deliveryOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesOrder">
+        <PropertyRef Name="salesOrderID" />
+      </Principal>
+      <Dependent Role="deliveryOrder">
+        <PropertyRef Name="salesOrder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__inquiry__company__15502E78">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="inquiry" Type="ERP_DBModel.Store.inquiry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="inquiry">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__inquriy_m__compa__37A5467C">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="inquriy_ma" Type="ERP_DBModel.Store.inquriy_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="inquriy_ma">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__inquriy_m__inqui__35BCFE0A">
+    <End Role="inquiry" Type="ERP_DBModel.Store.inquiry" Multiplicity="1" />
+    <End Role="inquriy_ma" Type="ERP_DBModel.Store.inquriy_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inquiry">
+        <PropertyRef Name="inquiryID" />
+      </Principal>
+      <Dependent Role="inquriy_ma">
+        <PropertyRef Name="inquiryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__inquriy_m__mater__36B12243">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="inquriy_ma" Type="ERP_DBModel.Store.inquriy_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="inquriy_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invo_ma__company__4BAC3F29">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="invo_ma" Type="ERP_DBModel.Store.invo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="invo_ma">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invo_ma__invoice__4CA06362">
+    <End Role="invoice" Type="ERP_DBModel.Store.invoice" Multiplicity="1" />
+    <End Role="invo_ma" Type="ERP_DBModel.Store.invo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="invoice">
+        <PropertyRef Name="invoiceID" />
+      </Principal>
+      <Dependent Role="invo_ma">
+        <PropertyRef Name="invoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invo_ma__materia__4D94879B">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="invo_ma" Type="ERP_DBModel.Store.invo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="invo_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__invoice__company__239E4DCF">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="invoice" Type="ERP_DBModel.Store.invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__materials__vendo__32E0915F">
+    <End Role="vendor" Type="ERP_DBModel.Store.vendor" Multiplicity="1" />
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendor">
+        <PropertyRef Name="vendorCode" />
+      </Principal>
+      <Dependent Role="materials">
+        <PropertyRef Name="vendorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orderForm__mater__5BE2A6F2">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="orderForm_ma" Type="ERP_DBModel.Store.orderForm_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="orderForm_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orderForm__order__5AEE82B9">
+    <End Role="orderForm" Type="ERP_DBModel.Store.orderForm" Multiplicity="1" />
+    <End Role="orderForm_ma" Type="ERP_DBModel.Store.orderForm_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orderForm">
+        <PropertyRef Name="orderFormID" />
+      </Principal>
+      <Dependent Role="orderForm_ma">
+        <PropertyRef Name="orderFormID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orderForm__rfqID__2D27B809">
+    <End Role="rfq" Type="ERP_DBModel.Store.rfq" Multiplicity="1" />
+    <End Role="orderForm" Type="ERP_DBModel.Store.orderForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rfq">
+        <PropertyRef Name="rfqID" />
+      </Principal>
+      <Dependent Role="orderForm">
+        <PropertyRef Name="rfqID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orderForm__rfqID__59FA5E80">
+    <End Role="rfq" Type="ERP_DBModel.Store.rfq" Multiplicity="1" />
+    <End Role="orderForm_ma" Type="ERP_DBModel.Store.orderForm_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rfq">
+        <PropertyRef Name="rfqID" />
+      </Principal>
+      <Dependent Role="orderForm_ma">
+        <PropertyRef Name="rfqID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orderForm__vendo__2C3393D0">
+    <End Role="vendor" Type="ERP_DBModel.Store.vendor" Multiplicity="1" />
+    <End Role="orderForm" Type="ERP_DBModel.Store.orderForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendor">
+        <PropertyRef Name="vendorCode" />
+      </Principal>
+      <Dependent Role="orderForm">
+        <PropertyRef Name="vendorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__out_ma__companyC__46E78A0C">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="out_ma" Type="ERP_DBModel.Store.out_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="out_ma">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__out_ma__delivery__47DBAE45">
+    <End Role="deliveryOrder" Type="ERP_DBModel.Store.deliveryOrder" Multiplicity="1" />
+    <End Role="out_ma" Type="ERP_DBModel.Store.out_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="deliveryOrder">
+        <PropertyRef Name="deliveryOrderID" />
+      </Principal>
+      <Dependent Role="out_ma">
+        <PropertyRef Name="deliveryOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__out_ma__material__48CFD27E">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="out_ma" Type="ERP_DBModel.Store.out_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="out_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__out_ma__salesOrd__45F365D3">
+    <End Role="salesOrder" Type="ERP_DBModel.Store.salesOrder" Multiplicity="1" />
+    <End Role="out_ma" Type="ERP_DBModel.Store.out_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesOrder">
+        <PropertyRef Name="salesOrderID" />
+      </Principal>
+      <Dependent Role="out_ma">
+        <PropertyRef Name="salesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quo_ma__companyC__3D5E1FD2">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="quo_ma" Type="ERP_DBModel.Store.quo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="quo_ma">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quo_ma__inquiryI__3C69FB99">
+    <End Role="inquiry" Type="ERP_DBModel.Store.inquiry" Multiplicity="1" />
+    <End Role="quo_ma" Type="ERP_DBModel.Store.quo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inquiry">
+        <PropertyRef Name="inquiryID" />
+      </Principal>
+      <Dependent Role="quo_ma">
+        <PropertyRef Name="inquiryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quo_ma__material__3B75D760">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="quo_ma" Type="ERP_DBModel.Store.quo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="quo_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quo_ma__quotatio__3A81B327">
+    <End Role="quotation" Type="ERP_DBModel.Store.quotation" Multiplicity="1" />
+    <End Role="quo_ma" Type="ERP_DBModel.Store.quo_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quotation">
+        <PropertyRef Name="quotationID" />
+      </Principal>
+      <Dependent Role="quo_ma">
+        <PropertyRef Name="quotationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quotation__compa__182C9B23">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="quotation" Type="ERP_DBModel.Store.quotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="quotation">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__quotation__inqui__1920BF5C">
+    <End Role="inquiry" Type="ERP_DBModel.Store.inquiry" Multiplicity="1" />
+    <End Role="quotation" Type="ERP_DBModel.Store.quotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inquiry">
+        <PropertyRef Name="inquiryID" />
+      </Principal>
+      <Dependent Role="quotation">
+        <PropertyRef Name="inquiryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__re_ven_ma__mater__5165187F">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="re_ven_ma" Type="ERP_DBModel.Store.re_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="re_ven_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__re_ven_ma__requi__5070F446">
+    <End Role="requisition" Type="ERP_DBModel.Store.requisition" Multiplicity="1" />
+    <End Role="re_ven_ma" Type="ERP_DBModel.Store.re_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="requisition">
+        <PropertyRef Name="requisitionID" />
+      </Principal>
+      <Dependent Role="re_ven_ma">
+        <PropertyRef Name="requisitionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__re_ven_ma__vendo__52593CB8">
+    <End Role="vendor" Type="ERP_DBModel.Store.vendor" Multiplicity="1" />
+    <End Role="re_ven_ma" Type="ERP_DBModel.Store.re_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendor">
+        <PropertyRef Name="vendorCode" />
+      </Principal>
+      <Dependent Role="re_ven_ma">
+        <PropertyRef Name="vendorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rece_ma__materia__5FB337D6">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="rece_ma" Type="ERP_DBModel.Store.rece_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="rece_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rece_ma__receipt__5EBF139D">
+    <End Role="receipt" Type="ERP_DBModel.Store.receipt" Multiplicity="1" />
+    <End Role="rece_ma" Type="ERP_DBModel.Store.rece_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="receipt">
+        <PropertyRef Name="receiptID" />
+      </Principal>
+      <Dependent Role="rece_ma">
+        <PropertyRef Name="receiptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__receipt__vendorC__300424B4">
+    <End Role="vendor" Type="ERP_DBModel.Store.vendor" Multiplicity="1" />
+    <End Role="receipt" Type="ERP_DBModel.Store.receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendor">
+        <PropertyRef Name="vendorCode" />
+      </Principal>
+      <Dependent Role="receipt">
+        <PropertyRef Name="vendorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rfq_ven_m__mater__571DF1D5">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="rfq_ven_ma" Type="ERP_DBModel.Store.rfq_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="rfq_ven_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rfq_ven_m__rfqID__5535A963">
+    <End Role="rfq" Type="ERP_DBModel.Store.rfq" Multiplicity="1" />
+    <End Role="rfq_ven_ma" Type="ERP_DBModel.Store.rfq_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rfq">
+        <PropertyRef Name="rfqID" />
+      </Principal>
+      <Dependent Role="rfq_ven_ma">
+        <PropertyRef Name="rfqID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__rfq_ven_m__vendo__5629CD9C">
+    <End Role="vendor" Type="ERP_DBModel.Store.vendor" Multiplicity="1" />
+    <End Role="rfq_ven_ma" Type="ERP_DBModel.Store.rfq_ven_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vendor">
+        <PropertyRef Name="vendorCode" />
+      </Principal>
+      <Dependent Role="rfq_ven_ma">
+        <PropertyRef Name="vendorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sales_ma__compan__403A8C7D">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="sales_ma" Type="ERP_DBModel.Store.sales_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="sales_ma">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sales_ma__materi__4316F928">
+    <End Role="materials" Type="ERP_DBModel.Store.materials" Multiplicity="1" />
+    <End Role="sales_ma" Type="ERP_DBModel.Store.sales_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materials">
+        <PropertyRef Name="materialID" />
+      </Principal>
+      <Dependent Role="sales_ma">
+        <PropertyRef Name="materialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sales_ma__quotat__412EB0B6">
+    <End Role="quotation" Type="ERP_DBModel.Store.quotation" Multiplicity="1" />
+    <End Role="sales_ma" Type="ERP_DBModel.Store.sales_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quotation">
+        <PropertyRef Name="quotationID" />
+      </Principal>
+      <Dependent Role="sales_ma">
+        <PropertyRef Name="quotationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__sales_ma__salesO__4222D4EF">
+    <End Role="salesOrder" Type="ERP_DBModel.Store.salesOrder" Multiplicity="1" />
+    <End Role="sales_ma" Type="ERP_DBModel.Store.sales_ma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="salesOrder">
+        <PropertyRef Name="salesOrderID" />
+      </Principal>
+      <Dependent Role="sales_ma">
+        <PropertyRef Name="salesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__salesOrde__compa__1BFD2C07">
+    <End Role="customers" Type="ERP_DBModel.Store.customers" Multiplicity="1" />
+    <End Role="salesOrder" Type="ERP_DBModel.Store.salesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="companyCode" />
+      </Principal>
+      <Dependent Role="salesOrder">
+        <PropertyRef Name="companyCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__salesOrde__quota__1CF15040">
+    <End Role="quotation" Type="ERP_DBModel.Store.quotation" Multiplicity="1" />
+    <End Role="salesOrder" Type="ERP_DBModel.Store.salesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quotation">
+        <PropertyRef Name="quotationID" />
+      </Principal>
+      <Dependent Role="salesOrder">
+        <PropertyRef Name="quotationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

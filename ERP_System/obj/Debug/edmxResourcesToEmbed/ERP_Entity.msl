@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERP_DBModelStoreContainer" CdmEntityContainer="ERP_DBEntities">
+    <EntitySetMapping Name="contactPerson">
+      <EntityTypeMapping TypeName="ERP_DBModel.contactPerson">
+        <MappingFragment StoreEntitySet="contactPerson">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="contacnPersonID" ColumnName="contacnPersonID" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="ERP_DBModel.customers">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="texRate" ColumnName="texRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliveryOrder">
+      <EntityTypeMapping TypeName="ERP_DBModel.deliveryOrder">
+        <MappingFragment StoreEntitySet="deliveryOrder">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="salesOrder" ColumnName="salesOrder" />
+          <ScalarProperty Name="deliveryOrderID" ColumnName="deliveryOrderID" />
+          <ScalarProperty Name="deliveryLocation" ColumnName="deliveryLocation" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inquiry">
+      <EntityTypeMapping TypeName="ERP_DBModel.inquiry">
+        <MappingFragment StoreEntitySet="inquiry">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="inquiryID" ColumnName="inquiryID" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inquriy_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.inquriy_ma">
+        <MappingFragment StoreEntitySet="inquriy_ma">
+          <ScalarProperty Name="inquiryID" ColumnName="inquiryID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invo_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.invo_ma">
+        <MappingFragment StoreEntitySet="invo_ma">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="invoiceID" ColumnName="invoiceID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="invoice">
+      <EntityTypeMapping TypeName="ERP_DBModel.invoice">
+        <MappingFragment StoreEntitySet="invoice">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="invoiceID" ColumnName="invoiceID" />
+          <ScalarProperty Name="fiscalYear" ColumnName="fiscalYear" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="materials">
+      <EntityTypeMapping TypeName="ERP_DBModel.materials">
+        <MappingFragment StoreEntitySet="materials">
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="placeOfOrigin" ColumnName="placeOfOrigin" />
+          <ScalarProperty Name="describtion" ColumnName="describtion" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orderForm">
+      <EntityTypeMapping TypeName="ERP_DBModel.orderForm">
+        <MappingFragment StoreEntitySet="orderForm">
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+          <ScalarProperty Name="orderFormID" ColumnName="orderFormID" />
+          <ScalarProperty Name="rfqID" ColumnName="rfqID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orderForm_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.orderForm_ma">
+        <MappingFragment StoreEntitySet="orderForm_ma">
+          <ScalarProperty Name="rfqID" ColumnName="rfqID" />
+          <ScalarProperty Name="orderFormID" ColumnName="orderFormID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="out_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.out_ma">
+        <MappingFragment StoreEntitySet="out_ma">
+          <ScalarProperty Name="salesOrderID" ColumnName="salesOrderID" />
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="deliveryOrderID" ColumnName="deliveryOrderID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quo_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.quo_ma">
+        <MappingFragment StoreEntitySet="quo_ma">
+          <ScalarProperty Name="quotationID" ColumnName="quotationID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+          <ScalarProperty Name="inquiryID" ColumnName="inquiryID" />
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quotation">
+      <EntityTypeMapping TypeName="ERP_DBModel.quotation">
+        <MappingFragment StoreEntitySet="quotation">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="inquiryID" ColumnName="inquiryID" />
+          <ScalarProperty Name="quotationID" ColumnName="quotationID" />
+          <ScalarProperty Name="effectiveDate" ColumnName="effectiveDate" />
+          <ScalarProperty Name="deadline" ColumnName="deadline" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="re_ven_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.re_ven_ma">
+        <MappingFragment StoreEntitySet="re_ven_ma">
+          <ScalarProperty Name="requisitionID" ColumnName="requisitionID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="receipt">
+      <EntityTypeMapping TypeName="ERP_DBModel.receipt">
+        <MappingFragment StoreEntitySet="receipt">
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+          <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="requisition">
+      <EntityTypeMapping TypeName="ERP_DBModel.requisition">
+        <MappingFragment StoreEntitySet="requisition">
+          <ScalarProperty Name="requisitionID" ColumnName="requisitionID" />
+          <ScalarProperty Name="bidDate" ColumnName="bidDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rfq">
+      <EntityTypeMapping TypeName="ERP_DBModel.rfq">
+        <MappingFragment StoreEntitySet="rfq">
+          <ScalarProperty Name="rfqID" ColumnName="rfqID" />
+          <ScalarProperty Name="quotationDate" ColumnName="quotationDate" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rfq_ven_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.rfq_ven_ma">
+        <MappingFragment StoreEntitySet="rfq_ven_ma">
+          <ScalarProperty Name="rfqID" ColumnName="rfqID" />
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sales_ma">
+      <EntityTypeMapping TypeName="ERP_DBModel.sales_ma">
+        <MappingFragment StoreEntitySet="sales_ma">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="quotationID" ColumnName="quotationID" />
+          <ScalarProperty Name="salesOrderID" ColumnName="salesOrderID" />
+          <ScalarProperty Name="materialID" ColumnName="materialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salesOrder">
+      <EntityTypeMapping TypeName="ERP_DBModel.salesOrder">
+        <MappingFragment StoreEntitySet="salesOrder">
+          <ScalarProperty Name="companyCode" ColumnName="companyCode" />
+          <ScalarProperty Name="quotationID" ColumnName="quotationID" />
+          <ScalarProperty Name="salesOrderID" ColumnName="salesOrderID" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="ERP_DBModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendor">
+      <EntityTypeMapping TypeName="ERP_DBModel.vendor">
+        <MappingFragment StoreEntitySet="vendor">
+          <ScalarProperty Name="vendorCode" ColumnName="vendorCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="taxRate" ColumnName="taxRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="rece_ma" TypeName="ERP_DBModel.rece_ma" StoreEntitySet="rece_ma">
+      <EndProperty Name="materials">
+        <ScalarProperty Name="materialID" ColumnName="materialID" />
+      </EndProperty>
+      <EndProperty Name="receipt">
+        <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
